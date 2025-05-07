@@ -319,7 +319,7 @@ class HookEntry : IYukiHookXposedInit {
  */
 fun PackageParam.startCheckingPermissions(versionCode: Int) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
             "com.qidian.QDReader.ui.activity.SplashActivity".toClass().apply {
                 val hook = method {
                     name = "go2Where"
@@ -364,12 +364,12 @@ fun PackageParam.startCheckingPermissions(versionCode: Int) {
 
 /**
  * 解锁会员卡专属背景
- * @since 7.9.334-1196 ~ 1299
+ * @since 7.9.334-1196 ~ 12222
  * @param [versionCode] 版本代码
  */
 fun PackageParam.unlockMemberBackground(versionCode: Int) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
             "com.qidian.QDReader.ui.activity.QDReaderThemeDetailActivity".toClass().method {
                 name = "updateViews"
                 param(ListClass)
@@ -397,12 +397,12 @@ fun PackageParam.unlockMemberBackground(versionCode: Int) {
 
 /**
  * 免广告领取奖励
- * @since 7.9.334-1196 ~ 1299
+ * @since 7.9.334-1196 ~ 12222
  * @param [versionCode] 版本代码
  */
 fun PackageParam.freeAdReward(versionCode: Int) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
 
             "com.qidian.QDReader.framework.webview.l".toClass().method {
                 name = "judian"
@@ -445,12 +445,12 @@ fun PackageParam.freeAdReward(versionCode: Int) {
 
 /**
  * 忽略限免批量订阅限制
- * @since 7.9.334-1196 ~ 1299
+ * @since 7.9.334-1196 ~ 12222
  * @param [versionCode] 版本代码
  */
 fun PackageParam.ignoreFreeSubscribeLimit(versionCode: Int, bridge: DexKitBridge) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
             bridge.findClass {
                 searchPackages = listOf("com.qidian.QDReader.component.bll.manager")
                 matcher {
@@ -499,12 +499,12 @@ fun PackageParam.ignoreFreeSubscribeLimit(versionCode: Int, bridge: DexKitBridge
 
 /**
  * 一键导出表情包
- * @since 7.9.334-1196 ~ 1299
+ * @since 7.9.334-1196 ~ 12222
  * @param [versionCode] 版本代码
  */
 fun PackageParam.exportEmoji(versionCode: Int) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
             "com.qidian.QDReader.ui.activity.QDStickersDetailActivity".toClass().method {
                 param(
                     "com.qidian.QDReader.ui.activity.QDStickersDetailActivity".toClass(),
@@ -599,12 +599,12 @@ private fun Context.exportEmojiDialog(
 
 /**
  * 发帖显示图片直链
- * @since 7.9.334-1196 ~ 1299
+ * @since 7.9.334-1196 ~ 12222
  * @param [versionCode] 版本代码
  */
 fun PackageParam.postToShowImageUrl(versionCode: Int, bridge: DexKitBridge) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
             bridge.findClass {
                 searchPackages = listOf("com.qidian.QDReader.ui.dialog")
                 matcher {
@@ -665,12 +665,12 @@ private fun Context.showUrlListDialog(urls: List<String>) {
 
 /**
  * 启用旧版每日导读
- * @since 7.9.334-1196 ~ 1299
+ * @since 7.9.334-1196 ~ 12222
  * @param [versionCode] 版本代码
  */
 fun PackageParam.oldDailyRead(versionCode: Int, bridge: DexKitBridge) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
 
             bridge.findClass {
                 searchPackages = listOf("com.qidian.QDReader.flutter")
@@ -711,12 +711,12 @@ fun PackageParam.oldDailyRead(versionCode: Int, bridge: DexKitBridge) {
 
 /**
  * 启用自定义imei
- * @since 7.9.334-1196 ~ 1299
+ * @since 7.9.334-1196 ~ 12222
  * @param [versionCode] 版本代码
  */
 fun PackageParam.customIMEI(versionCode: Int, bridge: DexKitBridge) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
             bridge.apply {
 
                 findClass {
@@ -778,7 +778,7 @@ fun PackageParam.customIMEI(versionCode: Int, bridge: DexKitBridge) {
 
 fun PackageParam.cookie(versionCode: Int, bridge: DexKitBridge) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
             "com.qidian.QDReader.repository.entity.user_account.UserAccountItemBean".toClass()
                 .method {
                     name = "getUserBasicInfo"
@@ -816,7 +816,7 @@ fun PackageParam.cookie(versionCode: Int, bridge: DexKitBridge) {
 
 fun PackageParam.debug(versionCode: Int, bridge: DexKitBridge) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
             "com.yuewen.fock.Fock".toClass().method {
                 name = "sign"
                 paramCount(1)
@@ -851,12 +851,12 @@ fun PackageParam.debug(versionCode: Int, bridge: DexKitBridge) {
  * 修复抖音分享
  * @param versionCode Int
  * @param bridge DexKitBridge
- * @since 7.9.334-1196 ~ 1299
+ * @since 7.9.334-1196 ~ 12222
  *
  */
 fun PackageParam.fixDouYinShare(versionCode: Int, bridge: DexKitBridge) {
     when (versionCode) {
-        in 1196..1299 -> {
+        in 1196..12222 -> {
             bridge.findClass {
                 searchPackages = listOf("com.qidian.QDReader.util")
                 matcher {
