@@ -44,7 +44,7 @@ import java.lang.reflect.Modifier
  */
 fun PackageParam.redirectReadingPageBackgroundPath(versionCode: Int, bridge: DexKitBridge) {
     when (versionCode) {
-        in 1000..2000 -> {
+        in 1000..12222 -> {
             bridge.findClass {
                 excludePackages = listOf("com")
                 matcher {
@@ -84,7 +84,7 @@ fun PackageParam.redirectReadingPageBackgroundPath(versionCode: Int, bridge: Dex
  * * 在配音条播放成功后长按即会弹出导出对话框
  * * 编辑框的内容是文件名
  * * 导出至 /Sdcard/storage/emulated/0/Download/QDReader/Audio
- * @since 7.9.222-1000 ~ 2000
+ * @since 7.9.222-1000 ~ 12222
  * @param [versionCode] 版本代码
  * @param [enableShowReaderPageChapterSaveRawPictures] 启用显示阅读器页面章节保存原始图片
  * @param [enableShowReaderPageChapterSavePictureDialog] 启用显示阅读器页面章节保存图片对话框
@@ -101,7 +101,7 @@ fun PackageParam.readingPageChapterCorrelation(
     bridge: DexKitBridge
 ) {
     when (versionCode) {
-        in 1000..2000 -> {
+        in 1000..12222 -> {
             if (enableShowReaderPageChapterSaveRawPictures) {
                 "com.qd.ui.component.modules.imagepreivew.QDUIGalleryActivity".toClass().method {
                     name = "initView"
@@ -291,7 +291,7 @@ private fun Context.audioExportDialog(networkUrl: String, filePath: String) {
 /**
  * 阅读时间加倍
  * * 随缘生效,默认为5倍,建议倍速不要太大，开大了到时候号没了后果自负
- * @since 7.9.222-1000 ~ 2000
+ * @since 7.9.222-1000 ~ 12222
  * @param [versionCode] 版本代码
  * @param [speedFactor] 速度系数
  */
@@ -299,7 +299,7 @@ fun PackageParam.readingTimeSpeedFactor(
     versionCode: Int, speedFactor: Int = 5, bridge: DexKitBridge
 ) {
     when (versionCode) {
-        in 1000..2000 -> {
+        in 1000..12222 -> {
 
             bridge.findClass {
                 excludePackages = listOf("com")
@@ -387,7 +387,7 @@ fun PackageParam.readBookLastPage(
     hideAdView: Boolean = false
 ) {
     when (versionCode) {
-        in 1000..2000 -> {
+        in 1000..12222 -> {
             "com.qidian.QDReader.ui.view.lastpage.LastPageRoleView".toClass().method {
                 param("com.qidian.QDReader.repository.entity.BookLastPage".toClass())
                 returnType = UnitType
